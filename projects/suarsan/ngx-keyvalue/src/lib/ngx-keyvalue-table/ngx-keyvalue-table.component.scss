@@ -1,0 +1,21 @@
+:host {
+    > table {
+        > tbody {
+            > tr {
+                > td:last-of-type {
+                    text-align: right;
+                }
+            }
+        }
+    }
+    > figure {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 50px 0;
+        > p {
+            margin: 15px 0;
+        }
+    }
+}

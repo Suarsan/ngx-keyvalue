@@ -1,0 +1,5 @@
+<header [formGroup]="itemForm">
+    <input type="text" formControlName="key" placeholder="key">
+    <input type="text" formControlName="value" placeholder="value">
+    <button [disabled]="!itemForm.valid" (click)="add()">add</button>
+</header>

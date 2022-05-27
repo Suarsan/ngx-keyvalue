@@ -1,0 +1,12 @@
+:host {
+    display: flex;
+    flex-direction: column;
+    > header {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-end;
+        > button {
+            margin: 0 15px 16px 15px;
+        }
+    }
+}
