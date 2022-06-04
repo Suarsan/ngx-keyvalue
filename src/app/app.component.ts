@@ -15,9 +15,6 @@ export class AppComponent {
     { key: 'key_5', value: 'value_5' }
   ];
 
-  constructor() {
-  }
-
   public listenChanges(changes: Array<Item>) {
     console.dir(changes);
   }

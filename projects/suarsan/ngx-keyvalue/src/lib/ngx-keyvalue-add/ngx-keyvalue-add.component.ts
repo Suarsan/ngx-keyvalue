@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
+import { Item } from '../item.interface';
 import { NgxKeyvalueService } from '../ngx-keyvalue.service';
 
 @Component({
@@ -21,7 +22,8 @@ export class NgxKeyvalueAddComponent implements OnInit {
 
   public add() {
     if (this.itemForm.valid) {
-      this.keyvalueService.addItem({ key: this.itemForm.get('key')!.value, value: this.itemForm.get('value')!.value });
+      const item: Item = { key: this.itemForm.get('key')!.value, value: this.itemForm.get('value')!.value };
+      this.keyvalueService.addItem(item);
       this.itemForm.reset();
     }
   }

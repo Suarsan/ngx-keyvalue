@@ -1,7 +1,6 @@
 import { TestBed } from '@angular/core/testing';
 import { tap } from 'rxjs/internal/operators/tap';
 import { Item } from './item.interface';
-
 import { NgxKeyvalueService } from './ngx-keyvalue.service';
 
 describe('NgxKeyvalueService', () => {
@@ -16,18 +15,18 @@ describe('NgxKeyvalueService', () => {
     expect(service).toBeTruthy();
   });
 
-  it('listenAddItem receive to add item', () => {
+  it('should listenAddItem receive item to add', () => {
     const item: Item = { key: 'key', value: 'value' };
     service.listenAddItem().pipe(
-      tap(o => expect(o).toBe(item))
+      tap(o => expect(o).toEqual(item))
     ).subscribe();
     service.addItem(item);
   });
 
-  it('listenDeleteItem receive to delete item', () => {
+  it('should listenDeleteItem receive item to delete', () => {
     const item: Item = { key: 'key', value: 'value' };
     service.listenDeleteItem().pipe(
-      tap(o => expect(o).toBe(item))
+      tap(o => expect(o).toEqual(item))
     ).subscribe();
     service.deleteItem(item);
   });
