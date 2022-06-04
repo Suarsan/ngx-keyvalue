@@ -1,3 +1,4 @@
+import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { ReactiveFormsModule } from '@angular/forms';
 import { NgxKeyvalueAddComponent } from './ngx-keyvalue-add/ngx-keyvalue-add.component';
@@ -17,6 +18,7 @@ import { NgxKeyvalueService } from './ngx-keyvalue.service';
     NgxKeyvalueService
   ],
   imports: [
+    CommonModule,
     ReactiveFormsModule
   ],
   exports: [

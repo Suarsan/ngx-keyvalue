@@ -1,9 +1,50 @@
+$primary-color: rgb(44, 196, 210);
 :host {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     > table {
+        width: calc(100% - 10px);
+        margin: 15px 5px;
+        border-radius: 5px;
+        box-sizing: border-box;
+        border: 2px solid rgba($primary-color, 1);
+        border-spacing: 0;
+        > thead {
+            background-color: rgba($primary-color, .2);
+            > tr {
+                > th {
+                    font-size: 14px;
+                    font-weight: 600;
+                    color: rgba($primary-color, 1);
+                    text-align: left;
+                    padding: 10px 15px;
+                }
+            }
+        }
         > tbody {
             > tr {
-                > td:last-of-type {
-                    text-align: right;
+                > td {
+                    font-size: 14px;
+                    font-weight: 500;
+                    color: rgba($primary-color, 1);
+                    padding: 10px 15px;
+                    > button {
+                        font-size: 10px;
+                        font-weight: 500;
+                        padding: 5px 10px;
+                        color: rgba(white, 1);
+                        border: 2px solid rgba($primary-color, 1);
+                        background-color: rgba($primary-color, 1);
+                        border-radius: 5px;
+                    }
+                    &:last-of-type {
+                        text-align: right;
+                    }
+                }
+                &:nth-of-type(even) {
+                    background-color: rgba($primary-color, .1);
                 }
             }
         }

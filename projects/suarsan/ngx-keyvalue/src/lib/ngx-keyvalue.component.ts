@@ -10,8 +10,8 @@ import { NgxKeyvalueService } from './ngx-keyvalue.service';
 })
 export class NgxKeyvalueComponent implements OnInit {
 
-  @Input() data!: Array<Item>;
-  @Output() changes = new EventEmitter();
+  @Input() input!: Array<Item>;
+  @Output() changes = new EventEmitter<Array<Item>>();
   items = new Array<Item>();
 
   constructor(private keyValueService: NgxKeyvalueService,
@@ -23,8 +23,8 @@ export class NgxKeyvalueComponent implements OnInit {
   }
 
   ngOnChanges() {
-    if (this.data && (this.data.length > 0)) {
-      this.items = this.data;
+    if (this.input && (this.input.length > 0)) {
+      this.items = this.input;
     }
   }
 
@@ -38,11 +38,7 @@ export class NgxKeyvalueComponent implements OnInit {
 
   private listenDeleteItem() {
     this.keyValueService.listenDeleteItem().pipe(
-      tap(item => {
-        this.items.splice(
-          this.items.findIndex(i => i.key === item.key)
-        , 1);
-      }),
+      tap(item => this.items.splice(this.items.findIndex(i => i.key === item.key), 1)),
       tap(o => this.cd.detectChanges()),
       tap(o => this.changes.emit(this.items))
     ).subscribe();

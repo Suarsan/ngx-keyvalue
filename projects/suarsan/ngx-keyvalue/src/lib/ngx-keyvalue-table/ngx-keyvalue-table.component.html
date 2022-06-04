@@ -1,8 +1,9 @@
 <table *ngIf="items && items.length > 0">
     <thead>
         <tr>
-            <th>value</th>
-            <th>key</th>
+            <th>KEY</th>
+            <th>VALUE</th>
+            <th></th>
         </tr>
     </thead>
     <tbody>
@@ -11,7 +12,7 @@
             <td>{{ item.value }}</td>
             <td>
                 <button (click)="delete(item)">
-                    <span>delete</span>
+                    <span>DELETE</span>
                 </button>
             </td>
         </tr>
