@@ -4,7 +4,7 @@
 
 A full featured and customizable key/value pairs generator for Angular.
 
-![alt text](https://github.com/Suarsan/ngx-keyvalue/raw/master/projects/suarsan/ngx-keyvalue/demo.png)
+![alt text](https://github.com/Suarsan/ngx-keyvalue/raw/master/projects/suarsan/ngx-keyvalue/demo.PNG)
 
 
 ## Demo
