@@ -1,6 +1,26 @@
 {
   "name": "@suarsan/ngx-keyvalue",
-  "version": "0.0.3",
+  "version": "0.0.5",
+  "keywords": [
+    "angular",
+    "ngx",
+    "suarsan",
+    "keyvalue",
+    "key value",
+    "key",
+    "value",
+    "list",
+    "reactive forms"
+  ],
+  "author": {
+    "name": "Javier Suárez Sánchez",
+    "email": "javiersuarsan@gmail.com",
+    "url": "https://www.javiersuarezsanchez.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Suarsan/ngx-keyvalue"
+  },
   "peerDependencies": {
     "@angular/common": "^13.3.0",
     "@angular/core": "^13.3.0"
