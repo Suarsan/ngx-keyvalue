@@ -1,27 +1,74 @@
 # NgxKeyvalue
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.5.
+[![npm version](https://badge.fury.io/js/@suarsan%2Fngx-keyvalue.svg)](https://badge.fury.io/js/@suarsan%2Fngx-keyvalue)
 
-## Development server
+A full featured and customizable key/value pairs generator for Angular.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+![alt text](https://github.com/Suarsan/ngx-keyvalue/raw/master/projects/suarsan/ngx-keyvalue/demo.png)
 
-## Code scaffolding
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Demo
 
-## Build
+Try full demo  at **[ngx-keyvalue](https://javiersuarezsanchez.com/#/ngx-keyvalue)**
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## Usage
 
-## Running unit tests
+#### Installation
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Install via npm
 
-## Running end-to-end tests
+    npm install @suarsan/ngx-keyvalue
+    
+#### Usage
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+Import ``NgxKeyvalueModule`` in your app.module.ts
 
-## Further help
+    import { NgModule } from '@angular/core';
+    import { BrowserModule } from '@angular/platform-browser';
+    import { AppComponent } from './app.component';
+    
+    import { NgxKeyvalueModule } from '@suarsan/ngx-keyvalue';
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+    @NgModule({
+    declarations: [
+        AppComponent
+    ],
+    imports: [
+        BrowserModule,
+        NgxKeyvalueModule
+    ],
+    providers: [],
+    bootstrap: [AppComponent]
+    })
+    export class AppModule { }
+
+## Documentation
+
+#### Inputs
+
+| Input | Type | Default | Required | Description |
+| ----- | ---- | ------  | -------- | ----------- |
+| input | `Array<Item>` | [] | false | Input data |
+
+#### Example
+
+    <ngx-keyvalue [input]="data" (changes)="listenChanges($event)"></ngx-keyvalue>
+
+---
+
+## Creator
+
+**[Javier Suárez Sánchez](https://javiersuarezsanchez.com)**
+
+
+
+
+---
+
+### Keywords
+
+`angular` `ngx` `javascript` `keyvalue` `key` `value` `list` `rich` `customizable`
+
+---
+
+
