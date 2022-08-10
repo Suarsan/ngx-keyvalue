@@ -9,7 +9,7 @@ A full featured and customizable key/value pairs generator for Angular.
 
 ## Demo
 
-Try full demo  at **[ngx-keyvalue](https://javiersuarezsanchez.com/#/ngx-keyvalue)**
+Try full demo  at **[ngx-keyvalue](https://javiersuarezsanchez.com/ngx-keyvalue)**
 
 ## Usage
 
